@@ -2,20 +2,8 @@ package compliance_framework.intruder_issue_outstanding
 
 import future.keywords.if
 
-title := input.Issue.title if {
-	count(input.OutstandingOccurrences) > 0
-}
-
-else := input.FixedOccurrences[0].title if {
-	count(input.FixedOccurrences) > 0
-}
-
-description := input.Issue.description if {
-	count(input.OutstandingOccurrences) > 0
-}
-else := input.FixedOccurrences[0].description if {
-	count(input.FixedOccurrences) > 0
-}
+title := input.Title
+description := input.Description
 
 violation[{"remarks": remarks}] if {
 	count(	input.OutstandingOccurrences) > 0

@@ -18,6 +18,8 @@ test_violation_when_issue_outstanding if {
 			"title": "Issue 1",
 			"description": "Issue 1 description",
 		},
+		"Title": "Issue 1",
+		"Description": "Issue 1 description",
 	}
 
 	violations := policy.violation with input as inp
@@ -37,6 +39,8 @@ test_violation_when_issue_resolved if {
 			"remediated_at": "2026-02-20T04:08:18.217116Z",
 		}],
 		"OutstandingOccurrences": null,
+		"Title": "Issue 1",
+		"Description": "Issue 1 description",
 	}
 
 	violations := policy.violation with input as inp
@@ -67,6 +71,8 @@ test_violation_when_issue_outstanding_but_previously_resolved if {
 			"occurrence_id": 9101,
 			"first_seen_at": "2026-02-19T17:33:51.677058Z",
 		}],
+		"Title": "Issue 1",
+		"Description": "Issue 1 description",
 	}
 
 	violations := policy.violation with input as inp
