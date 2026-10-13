@@ -1,0 +1,2 @@
+lisa-design:
+W2-S4-T02: replace push.yaml/test.yml (OPA 1.6.0 test+check) with the shared ci-policies caller pinned to workflows v1.5.2 (6e7fc9c). Only CI error locally on OPA 1.14.1 / Regal 0.43.0 (shared config): opa fmt on intruder_issue_outstanding.rego (stray tab in count(), trailing comma in sprintf args). Regal warnings (3x equals-over-count) left as is by decision (fix errors only). Behaviour proven identical: opa eval of data.compliance_framework.intruder_issue_outstanding on 15 inputs + no-input, main vs branch, byte-identical; all 3 test_* true on both.
